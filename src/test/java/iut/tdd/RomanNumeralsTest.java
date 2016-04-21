@@ -89,4 +89,16 @@ public class RomanNumeralsTest {
 		Assert.assertEquals(expected, actual);
 	}
 	
+	@Test
+	public void should_return_DCLIII_when_653 () {
+		//Given
+		String input = "653";
+		String expected = "DCLIII";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertToRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	
 }
