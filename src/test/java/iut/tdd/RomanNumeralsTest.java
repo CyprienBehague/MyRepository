@@ -100,5 +100,17 @@ public class RomanNumeralsTest {
 		//Then
 		Assert.assertEquals(expected, actual);
 	}
+	@Test
+	public void should_return_MMCCCXLIII_when_2343 () {
+		//Given
+		String input = "2343";
+		String expected = "MMCCCXLIII";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertToRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	
 	
 }
