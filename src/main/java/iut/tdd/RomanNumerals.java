@@ -10,7 +10,9 @@ public class RomanNumerals {
 		int modDix=a%10;
 		int modCent=((a-modDix)%100)/10;
 		int modMil=((a-modDix-modCent*10)%1000)/100;
-			
+		int modDixMil=((a-modDix-modCent*10-modMil*100)%10000)/1000;
+		
+		if(a>999){r=r+toRoman(modDixMil,"M","",""); }
 		if(a>99){r=r+toRoman(modMil,"C","D","M");	}
 		if(a>9){r=r+toRoman(modCent,"X","L","C"); }
 		r=r+toRoman(modDix,"I","V","X");
