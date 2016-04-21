@@ -6,10 +6,10 @@ import org.junit.Test;
 public class RomanNumeralsTest {
 
 	@Test
-	public void should_return_I_when_1 () {
+	public void should_return_V_when_5 () {
 		//Given
-		String input = "1";
-		String expected = "I";
+		String input = "5";
+		String expected = "V";
 		RomanNumerals romanNumeral = new RomanNumerals();
 		//When
 		String actual = romanNumeral.convertToRoman(input);
@@ -18,17 +18,17 @@ public class RomanNumeralsTest {
 	}
 	
 	@Test
-	public void should_return_1_when_I () {
+	public void should_return_X_when_10 () {
 		//Given
-		String input = "I";
-		String expected = "1";
+		String input = "10";
+		String expected = "X";
 		RomanNumerals romanNumeral = new RomanNumerals();
 		//When
-		String actual = romanNumeral.convertFromRoman(input);
+		String actual = romanNumeral.convertToRoman(input);
 		//Then
 		Assert.assertEquals(expected, actual);
+	}
 	
-	}	
 	@Test
 	public void should_return_IV_when_4 () {
 		//Given
@@ -40,4 +40,53 @@ public class RomanNumeralsTest {
 		//Then
 		Assert.assertEquals(expected, actual);
 	}
+	
+	@Test
+	public void should_return_XLV_when_45 () {
+		//Given
+		String input = "45";
+		String expected = "XLV";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertToRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void should_return_XVIII_when_18 () {
+		//Given
+		String input = "18";
+		String expected = "XVIII";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertToRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void should_return_IX_when_9 () {
+		//Given
+		String input = "9";
+		String expected = "IX";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertToRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void should_return_LXXXVII_when_87 () {
+		//Given
+		String input = "87";
+		String expected = "LXXXVII";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertToRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	
 }
